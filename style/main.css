@@ -1,0 +1,485 @@
+/*
+ * made by Lukas Wanko
+ * with encouragement from the University of Applied Science Salzburg
+ */
+
+@charset "utf-8";
+/* CSS Document */
+html{
+	font-size:13px;
+	font-family:Verdana, Geneva, sans-serif;
+	color:#000;
+}
+body{
+	margin:100px 0px 20px 0px;
+	overflow:hidden;
+}
+
+/* header defintions */
+header{
+	position:absolute;
+	top:0px;
+	height:100px;
+	width:100%;
+	text-align:center;
+	background:url(../images/navigation.png) repeat-x;
+	color:#fff;
+	-moz-box-shadow: 0px 5px 5px #888;
+	-webkit-box-shadow: 0px 5px 5px #888;
+	box-shadow: 0px 5px 5px #888;
+	z-index:2;
+}
+header a:link, a:visited{
+	color:#fff;
+}
+nav{
+	font-family: 'Maven Pro', serif;
+	font-weight:bold;
+	width:470px;
+	height:40px;
+	position:absolute;
+	left:260;
+	line-height:30px;
+	font-size:16px;
+	top:15px;
+	z-index:3;
+	padding-top:5px;
+}
+
+nav div{
+	width:451px;
+	height:45px;
+	left:0px;
+	top:0px;
+	background:url(../images/menubar.png);
+	opacity:0.4;
+	filter: alpha(opacity = 40);
+	position:absolute;
+	z-index:-1;
+}
+
+/* navigation items */ 
+nav span{
+	
+	padding-right:20px;
+	padding-left:20px;
+}
+
+nav span a:hover{
+	color:#630;
+	text-decoration:underline;
+}
+
+#element_control{
+	position:absolute;
+	right:120; 
+	margin-right:-115px;
+	float: right; 
+	height:12px;
+	top:75px;
+	width:230px;
+	z-index:1;
+}
+#search_field{
+	position:absolute;
+	z-index:3;
+	left:50%;
+	margin-left:-125px;
+	top:74px;
+}
+
+#search_field input{
+	width:250px;
+	position:absolute;
+	top:0px;
+	padding:0px;
+	margin:0px;
+	height:22px;
+}
+
+#search_field #i1{
+	margin-left: 10px;
+	width:22px;
+	height:22px;
+	position:absolute;
+	top:0px;
+	left:240px;
+
+}
+
+#search_field #i2{
+	margin-left: 10px;
+	width:22px;
+	height:22px;
+	position:absolute;
+	top:0px;
+	left:-32px;
+}
+
+#mylocation{
+	position:absolute;
+	left:0px;
+	margin-left:200px;
+	top:74px;
+}
+
+#kml{
+	position:absolute;
+	left:7px;
+	top:74px;
+}
+#kml span{
+	position:absolute;
+	left:10px;
+	top:2px;
+	height:25px;
+	width:180px;
+	float:left;
+}
+
+/*site navigation in nav*/
+#indexlink, #descriptionlink, #createlink{
+	padding:7px;
+	margin:0px;
+	background-image:url(../images/nav.png);
+	height:30px;
+	opacity:0.5;
+}
+#indexlink:hover, #descriptionlink:hover, #createlink:hover{
+	background:#555;
+}
+
+/* black balk*/
+#blackbalk{
+	background:#444;
+	opacity:0.4;
+	filter: alpha(opacity = 40);
+	position:absolute;
+	z-index: 0;
+	bottom:0px;
+	height:30px;
+	width:100%;
+	left:0px;
+}
+
+#title{
+	font-family:Arial;
+	letter-spacing:-2px;
+	font-size:35px;
+	position:absolute;
+	top:15px;
+	width:320px;
+	height:50px;
+	left:-15px;
+	text-shadow: 2px 2px 3px #000;
+}
+/* right top corner item*/
+#opacitycorit{
+	border-bottom-left-radius:20px;
+	-moz-border-bottom-left-radius:20px;
+	background:#444;
+	filter: alpha(opacity = 40);
+	opacity:0.4;
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+#corit{
+	text-align:right;
+	margin:12px;
+	position:absolute;
+	right:0px;
+	top:0px;
+	margin-top:7px;
+}
+#corit #log{
+
+	font-weight:bold;
+	font-size:105%;
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+#corit #reg{
+	font-size:90%;
+	position:absolute;
+	top:18px;
+	right:0px;
+}
+#corit > form{
+	margin-top:5px;
+}
+/* corner_standard */
+.corit_standard{
+	width:110px;
+	height:50px;
+}
+/* corner_login */
+.corit_login{
+	width:450px;
+	height:65px;
+}
+#logout_button{
+	font-size:90%;
+	position:absolute;
+	top:23px;
+	right:0px;
+}
+#login_user{
+	float:left;
+	position:absolute;
+	left:20px;
+	top:2px;
+}
+#login_user input{
+	width:150px;
+}
+#login_password input{
+	width:150px;
+}
+#login_password{
+	float:left;
+	position:absolute;
+	left:53px;
+	top:25px;
+}
+#login_button{
+	position:absolute;
+	left:295px;
+	top:24px;
+	width:25px;
+	height:30px;
+}
+form#login{
+	display:none;
+}
+#pass{
+	font-size:80%;
+	color:#EEE;
+	position:absolute;
+	top:37px;
+	right:10px;
+
+}
+/* footer definitions */
+footer{
+	position:absolute;
+	bottom:0px;
+	background:#FFF;
+	text-align:center;
+	height:20px;
+	max-height:20px;
+	width:100%;
+	background:url(../images/navigation.png) repeat-x;
+	font-size:11px;
+	text-align:center;
+	color:#fff;
+	-moz-box-shadow: 0px -5px 5px #888;
+	-webkit-box-shadow: 0px -5px 5px #888;
+	box-shadow: 0px -5px 5px #888;
+	z-index:2;
+}
+
+footer a:link, a:visited, a:hover{
+	color:#fff;
+	text-decoration:none;
+}
+footer span{
+	line-height: 20px;
+	margin: 0px 7px 0px 7px;
+}
+footer span.fright{
+	float:right;
+}
+footer span.fleft{
+	float:left;
+}
+footer div{
+	height: 10px;
+	width: 10px;
+	opacity:0.5;
+	background:#444;
+	position:absolute;
+	top:0px;
+	line-height: 20px;
+	margin: 0px 7px 0px 7px;
+}
+
+footer > div:nth-child(4){
+	float:left;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+}
+
+footer > div:nth-child(5){
+	float:none;
+	margin-left:-50%;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+}
+
+footer > div:nth-child(6){
+	float:right;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+}
+
+/* general defintions */
+@font-face {
+	font-family: Epo;
+	src: url('fonts/EpoXY.ttf');
+}
+
+#map_canvas{
+	position:absolute;
+	z-index:1;
+	top:100px;
+	left:0px;
+	bottom:20px;
+	width:100%;
+	height:100%;
+}
+
+#form_reg{
+	position:absolute;
+	left:50%;
+	margin-left:-270px;
+	top:50%;
+	margin-top:-230px;
+	width:550px;
+}
+
+#form_reg #fr_user{
+	position:absolute;
+	top:150px;
+	left:50px;
+}
+#form_reg #fr_pass{
+	position:absolute;
+	top:230px;
+	left:83px;
+}
+
+#form_reg #fr_pass_wd{
+	position:absolute;
+	left:-28px;
+	width:700px;
+	top:30px;
+}
+
+#form_reg #fr_email{
+	position:absolute;
+	top:180px;
+	left:103px;
+}
+#form_reg #fr_location{
+	position:absolute;
+	top:310px;
+	left:86px;
+}
+#form_reg #fr_send{
+	position:absolute;
+	top:360px;
+	left:250px;
+}
+#form_reg #fr_title{
+	position:absolute;
+	top:90px;
+	left:50px;
+}
+
+h1{
+	font: Tahoma, Geneva, sans-serif 18px bold #030;
+	color: #666;
+	font-size:28px;
+	font-weight:normal;
+}
+h2{
+	font: Tahoma, Geneva, sans-serif 18px bold #030;
+	color: #666;
+	font-size:18px;
+	font-weight:normal;
+}
+
+#impressum #developer{
+	margin:30px 30px 30px 50px;
+}
+#impressum{
+	position:absolute;
+	left:50%;
+	margin-left:-270px;
+	top:50%;
+	margin-top:-160px;
+	width:550px;
+}
+
+#create_content{
+	position:absolute;
+	left:50%;
+	margin-left:-200px;
+	top:50%;
+	margin-top:-170px;
+	width:400px;
+}
+
+#create_choice #choice1{
+	position:absolute;
+	left:0px;
+	margin-top:20px;
+	margin-left:50px;
+	background:url(../images/choice_1.png) no-repeat;
+	padding-left:40px;
+	height:30px;
+	line-height:30px;
+}
+#create_choice #choice2{
+	position:absolute;
+	left:0px;
+	margin-top:70px;
+	margin-left:50px;
+	background:url(../images/choice_2.png) no-repeat;
+	padding-left:40px;
+	height:30px;
+	line-height:30px;
+}
+
+#create_manual{
+	display:none;
+}
+
+#create_form #first_row{
+	position:absolute;
+}
+
+#create_form #second_row{
+	position:absolute;
+	left:390px;
+	width:
+}
+
+#create_form #create_send{
+	position:absolute;
+	left:305px;
+	top:320px;
+}
+
+#create_map{
+	width:100%;
+	height:100%;
+}
+
+.message_yes{
+	margin-left: 15px; 
+	font-size:12px;	
+	color:green;
+}
+.message_no{
+	margin-left: 15px; 
+	font-size:13px;	
+	color:red;
+	width:500px;
+}
+
+.appear_text{
+	display:none;
+}
